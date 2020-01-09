@@ -1,0 +1,180 @@
+dnl libopenraw configure
+dnl written by Hubert Figuiere
+
+AC_PREREQ(2.50)
+AC_INIT(include/libopenraw/libopenraw.h)
+AM_CONFIG_HEADER(config.h)
+AM_INIT_AUTOMAKE(libopenraw, 0.0.5)
+AM_MAINTAINER_MODE
+
+
+dnl ---------------------------------------------------------------------------
+dnl Advanced information about versioning:
+dnl   * "Writing shared libraries" by Mike Hearn
+dnl         http://navi.cx/~mike/writing-shared-libraries.html
+dnl   * libtool.info chapter "Versioning"
+dnl   * libtool.info chapter "Updating library version information"
+dnl ---------------------------------------------------------------------------
+dnl Versioning:
+dnl  - CURRENT (Major):  Increment if the interface has changes. AGE is always
+dnl                      *changed* at the same time.
+dnl  - AGE (Micro):      Increment if any interfaces have been added; set to 0
+dnl                      if any interfaces have been removed. Removal has
+dnl                      precedence over adding, so set to 0 if both happened.
+dnl                      It denotes upward compatibility.
+dnl  - REVISION (Minor): Increment any time the source changes; set to
+dnl                      0 if you incremented CURRENT.
+dnl
+dnl  To summarize. Any interface *change* increment CURRENT. If that interface
+dnl  change does not break upward compatibility (ie it is an addition),
+dnl  increment AGE, Otherwise AGE is reset to 0. If CURRENT has changed,
+dnl  REVISION is set to 0, otherwise REVISION is incremented.
+dnl ---------------------------------------------------------------------------
+dnl version 0.0.3 is 3 2 0
+dnl version 0.0.4 is 4 3 0
+dnl version 0.0.5 is 5 4 0 
+AC_SUBST([LIBOPENRAW_REVISION], [0])
+AC_SUBST([LIBOPENRAW_AGE],      [4])
+AC_SUBST([LIBOPENRAW_CURRENT],  [5])
+AC_SUBST([LIBOPENRAW_CURRENT_MIN],
+         [`expr $LIBOPENRAW_CURRENT - $LIBOPENRAW_AGE`])
+AC_SUBST([LIBOPENRAW_VERSION_INFO],
+         [$LIBOPENRAW_CURRENT:$LIBOPENRAW_REVISION:$LIBOPENRAW_AGE])
+
+dnl the major version. used for package names, etc
+LIBOPENRAW_MAJOR_VERSION=$LIBOPENRAW_CURRENT_MIN.0
+AC_SUBST(LIBOPENRAW_MAJOR_VERSION)
+
+dnl the path where includes are installed
+LIBOPENRAW_INCLUDE_BASE=libopenraw-$LIBOPENRAW_MAJOR_VERSION
+AC_SUBST(LIBOPENRAW_INCLUDE_BASE)
+
+
+dnl --------------------------------------------------------------------
+dnl guess directory to install *.pc into
+dnl --------------------------------------------------------------------
+pkgconfigdir='${libdir}/pkgconfig'
+AC_SUBST(pkgconfigdir)
+
+dnl Checks for programs.
+AC_PROG_CC
+AC_PROG_CPP
+AC_PROG_INSTALL
+AC_PROG_LIBTOOL
+
+
+dnl Requirements
+EXEMPI_REQUIRED=1.99.5
+
+dnl Needed for GdkPixbuf
+LIBGLIB_REQUIRED=2.0.0
+dnl Optional GdkPixbuf support
+LIBGDKPIXBUF_REQUIRED=2.0.0
+
+AC_SUBST(LIBGLIB_REQUIRED)
+AC_SUBST(LIBGDKPIXBUF_REQUIRED)
+
+AC_ARG_WITH(darwinports,[  --with-darwinports     add /opt/local/... to CPP/LDFLAGS (Mac OSX)],[
+        if test "x$withval" != "xno"; then
+                CPPFLAGS="$CPPFLAGS -I/opt/local/include"
+                LDFLAGS="$LDFLAGS -L/opt/local/lib"
+		CC=g++
+        fi
+])
+AC_ARG_WITH(fink,[  --with-fink          add /sw/... to CPP/LDFLAGS (Mac OSX)],[
+        if test "x$withval" != "xno"; then
+                CPPFLAGS="$CPPFLAGS -I/sw/include"
+                LDFLAGS="$LDFLAGS -L/sw/lib"
+		CC=g++
+        fi
+])
+
+BOOST_REQUIRE([1.33.0])
+BOOST_TEST([s])
+BOOST_SMART_PTR
+BOOST_STRING_ALGO
+BOOST_BIND
+
+AC_LANG(C)
+AC_CHECK_HEADER(jpeglib.h, ,
+	AC_MSG_ERROR([jpeglib headers not found]))
+dnl PKG_CHECK_MODULES(EXEMPI, exempi-2.0 >= $EXEMPI_REQUIRED)
+PKG_CHECK_MODULES(LIBXML, libxml-2.0 >= 2.5.0)
+
+#
+dnl do we want GNOME ?
+#
+AC_ARG_ENABLE([gnome],	
+              [AC_HELP_STRING([--disable-gnome],[disable support for Gnome])],,
+              [enable_gnome=yes])
+#
+# Checks for libgdkpixbuf
+#
+if test x$enable_gnome = xyes ; then
+   #
+   # Checks for libglib-2.0
+   # 
+   HAVE_LIBGLIB=no
+   PKG_CHECK_MODULES(LIBGLIB, glib-2.0 >= $LIBGLIB_REQUIRED,
+                    [AC_DEFINE(HAVE_LIBGLIB, 1, [Define to 1 to enable libglib support])
+                     HAVE_LIBGLIB=yes],
+                    [HAVE_LIBGLIB=no])
+
+   HAVE_LIBGDKPIXBUF=no
+   if test x$HAVE_LIBGLIB = xyes ; then
+      PKG_CHECK_MODULES(LIBGDKPIXBUF, gdk-pixbuf-2.0 >= $LIBGDKPIXBUF_REQUIRED,
+                     [AC_DEFINE(HAVE_LIBGDKPIXBUF, 1, [Define to 1 to enable libgdkpixbuf support])
+                      HAVE_LIBGDKPIXBUF=yes],
+                     [HAVE_LIBGDKPIXBUF=no])
+   else
+      AC_MSG_WARN([glib-2.0 missing, ignore GdkPixbuf support.])
+   fi
+   if test x$HAVE_LIBGDKPIXBUF = xyes ; then
+     HAVE_GNOME=yes
+   else
+     HAVE_GNOME=no
+   fi
+else
+   HAVE_GNOME=no
+   AC_MSG_CHECKING([for Gnome])
+   AC_MSG_RESULT([disabled])
+fi
+
+AM_CONDITIONAL(BUILD_GNOME_SUPPORT, test x$HAVE_GNOME = xyes)
+
+AX_CFLAGS_GCC_OPTION([-Wextra])
+AX_CXXFLAGS_GCC_OPTION([-Wextra])
+
+CXXFLAGS="$CXXFLAGS -ansi -pedantic -g -Wall -Wshadow"
+CFLAGS="$CFLAGS -pedantic -g -Wall"
+
+
+
+AC_OUTPUT([
+Makefile
+include/Makefile
+include/libopenraw/Makefile
+include/libopenraw++/Makefile
+lib/Makefile
+lib/capi/Makefile
+lib/io/Makefile
+lib/libopenraw-1.0.pc
+gnome/Makefile
+gnome/libopenraw-gnome-1.0.pc
+gnome/include/Makefile
+gnome/include/libopenraw-gnome/Makefile
+doc/Makefile
+doc/Doxyfile
+doc/doxygen/Makefile
+test/Makefile
+testsuite/Makefile
+tools/Makefile
+demo/Makefile
+])
+
+
+echo "
+Options:
+
+  Gnome support:     ${HAVE_GNOME}
+"
