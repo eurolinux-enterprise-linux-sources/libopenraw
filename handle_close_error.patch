@@ -1,0 +1,26 @@
+diff -ru libopenraw-0.0.9.orig/gnome/pixbuf-loader.c libopenraw-0.0.9/gnome/pixbuf-loader.c
+--- libopenraw-0.0.9.orig/gnome/pixbuf-loader.c	2011-11-13 08:00:09.000000000 +0100
++++ libopenraw-0.0.9/gnome/pixbuf-loader.c	2016-01-14 15:06:13.910095566 +0100
+@@ -98,7 +98,6 @@
+ 	
+     GdkPixbuf *pixbuf = NULL;
+     ORRawFileRef raw_file = NULL;
+-    (void)error;
+ 
+     raw_file = or_rawfile_new_from_memory(context->data->data, context->data->len,
+                                           OR_DATA_TYPE_NONE);
+@@ -129,9 +128,13 @@
+                                       context->user_data);
+         }
+         result = TRUE;
++    } else {
++        g_set_error (error,
++                     GDK_PIXBUF_ERROR,
++                     GDK_PIXBUF_ERROR_FAILED,
++                     "Unable to load RAW file");
+     }
+ 
+-
+     g_byte_array_free(context->data, TRUE);
+     free(context);
+     return result;

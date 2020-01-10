@@ -1,10 +1,11 @@
 Summary:	Decode camera RAW files
 Name:		libopenraw
 Version:	0.0.9
-Release:	6%{?dist}
+Release:	7%{?dist}
 License:	LGPLv3+
 URL:		http://libopenraw.freedesktop.org/wiki
 Source0:	http://libopenraw.freedesktop.org/download/%{name}-%{version}.tar.bz2
+Patch0: handle_close_error.patch
 
 BuildRequires:	libtool autoconf automake
 BuildRequires:	boost-devel
@@ -64,6 +65,7 @@ digital cameras, in GTK+ applications.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %configure --disable-static --enable-gnome
@@ -127,6 +129,10 @@ gdk-pixbuf-query-loaders-%{__isa_bits} --update-cache || :
 %{_libdir}/gdk-pixbuf-2.0/*/loaders/*.so
 
 %changelog
+* Thu Jan 14 2016 Wim Taymans <wtaymans@redhat.com> - 0.0.9-7
+- Handle errors in the close function
+- Resolves: rhbz#1279153
+
 * Fri Jan 24 2014 Daniel Mach <dmach@redhat.com> - 0.0.9-6
 - Mass rebuild 2014-01-24
 
