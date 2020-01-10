@@ -1,7 +1,7 @@
 Summary:	Decode camera RAW files
 Name:		libopenraw
 Version:	0.0.9
-Release:	4%{?dist}
+Release:	6%{?dist}
 License:	LGPLv3+
 URL:		http://libopenraw.freedesktop.org/wiki
 Source0:	http://libopenraw.freedesktop.org/download/%{name}-%{version}.tar.bz2
@@ -127,6 +127,12 @@ gdk-pixbuf-query-loaders-%{__isa_bits} --update-cache || :
 %{_libdir}/gdk-pixbuf-2.0/*/loaders/*.so
 
 %changelog
+* Fri Jan 24 2014 Daniel Mach <dmach@redhat.com> - 0.0.9-6
+- Mass rebuild 2014-01-24
+
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 0.0.9-5
+- Mass rebuild 2013-12-27
+
 * Thu Feb 14 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.0.9-4
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_19_Mass_Rebuild
 
