@@ -1,0 +1,503 @@
+<testsuite>
+  <test>
+    <name>CR2-test 20D</name>
+    <file>/home/hub/samples/cr2/20D/img_0620.cr2</file>
+    <source>http://libopenraw.freedesktop.org/samples/cr2/img_0620.cr2</source>
+    <results>
+      <rawType>CR2</rawType>
+      <rawTypeId>65537</rawTypeId>
+      <thumbNum>3</thumbNum>
+      <thumbSizes>1536 160 384</thumbSizes>
+      <thumbFormats>JPEG JPEG 8RGB</thumbFormats>
+      <thumbDataSizes>377981 7239 294912</thumbDataSizes>
+      <rawDataType>CFA</rawDataType>
+      <rawDataSize>16973120</rawDataSize>
+      <rawDataDimensions>3596 2360</rawDataDimensions>
+      <rawCfaPattern>RGGB</rawCfaPattern>
+      <rawMinValue>0</rawMinValue>
+      <rawMaxValue>4095</rawMaxValue>
+      <rawMd5>29</rawMd5>
+      <metaOrientation>1</metaOrientation>
+    </results>
+  </test>
+  <test>
+    <name>CR2-test 450D</name>
+    <file>/home/hub/samples/cr2/450D/RAW_CANON_450D.CR2</file>
+    <source>http://www.rawsamples.ch/raws/canon/450d/RAW_CANON_450D.CR2</source>
+    <results>
+      <rawType>CR2</rawType>
+      <rawTypeId>65542</rawTypeId>
+      <thumbNum>3</thumbNum>
+      <thumbSizes>2256 160 539</thumbSizes>
+      <thumbFormats>JPEG JPEG 8RGB</thumbFormats>
+      <thumbDataSizes>892728 11024 1151304</thumbDataSizes>
+      <rawDataType>CFA</rawDataType>
+      <rawDataSize>24802624</rawDataSize>
+      <rawDataDimensions>4312 2876</rawDataDimensions>
+      <rawCfaPattern>RGGB</rawCfaPattern>
+      <rawMinValue>0</rawMinValue>
+      <rawMaxValue>16383</rawMaxValue>
+      <rawMd5>191</rawMd5>
+      <metaOrientation>1</metaOrientation>
+    </results>
+  </test>
+  <test>
+    <name>CR2-test 7D</name>
+    <file>/home/hub/samples/cr2/7D/canon7d_iso100.CR2</file>
+    <source compress="zip">http://movies.dpreview.com.s3.amazonaws.com/canoneos7d/studio_iso100.zip</source>
+    <results>
+      <rawType>CR2</rawType>
+      <rawTypeId>65564</rawTypeId>
+      <thumbNum>3</thumbNum>
+      <thumbSizes>5184 160 670</thumbSizes>
+      <thumbFormats>JPEG JPEG 8RGB</thumbFormats>
+      <thumbDataSizes>2263285 17704 1736640</thumbDataSizes>
+      <rawDataType>CFA</rawDataType>
+      <rawDataSize>37691520</rawDataSize>
+      <rawDataDimensions>5360 3516</rawDataDimensions>
+      <rawCfaPattern>RGGB</rawCfaPattern>
+      <rawMinValue>0</rawMinValue>
+      <rawMaxValue>16383</rawMaxValue>
+      <rawMd5>89</rawMd5>
+      <metaOrientation>1</metaOrientation>
+    </results>
+  </test>
+  <test>
+    <name>CR2-test G11</name>
+    <file>/home/hub/samples/cr2/G11/canong11_studio_ISO80.CR2</file>
+    <source compress="zip">http://movies.dpreview.com.s3.amazonaws.com/canong11/studio_ISO80.zip</source>
+    <results>
+      <rawType>CR2</rawType>
+      <rawTypeId>65565</rawTypeId>
+      <thumbNum>3</thumbNum>
+      <thumbSizes>1600 160 456</thumbSizes>
+      <thumbFormats>JPEG JPEG 8RGB</thumbFormats>
+      <thumbDataSizes>632111 7297 935712</thumbDataSizes>
+      <rawDataType>CFA</rawDataType>
+      <rawDataSize>20846592</rawDataSize>
+      <rawDataDimensions>3744 2784</rawDataDimensions>
+      <rawCfaPattern>RGGB</rawCfaPattern>
+      <rawMinValue>0</rawMinValue>
+      <rawMaxValue>4095</rawMaxValue>
+      <rawMd5>68</rawMd5>
+      <metaOrientation>1</metaOrientation>
+    </results>
+  </test>
+  <test>
+    <name>CRW-test 300D</name>
+    <file>/home/hub/samples/crw/300D/crw_1852.crw</file>
+    <source>http://launchpadlibrarian.net/4704665/CRW_1852.CRW</source>
+    <results>
+      <rawType>CRW</rawType>
+      <rawTypeId>65550</rawTypeId>
+      <thumbNum>1</thumbNum>
+      <thumbSizes>2048</thumbSizes>
+      <thumbFormats>JPEG</thumbFormats>
+      <thumbDataSizes>1359526</thumbDataSizes>
+      <rawDataType>CFA</rawDataType>
+      <rawDataSize>13036672</rawDataSize>
+      <rawDataDimensions>3152 2068</rawDataDimensions>
+      <rawCfaPattern>RGGB</rawCfaPattern>
+      <rawMinValue>0</rawMinValue>
+      <rawMaxValue>1023</rawMaxValue>
+      <rawMd5>94</rawMd5>
+      <metaOrientation>8</metaOrientation>
+    </results>
+  </test>
+  <test>
+    <name>CRW-test 10D</name>
+    <file>/home/hub/samples/crw/10D/canon-eos10.crw</file>
+    <source>http://digikam3rdparty.free.fr/TEST_IMAGES/RAW/HORIZONTAL/CANON-EOS10.CRW</source>
+    <results>
+      <rawType>CRW</rawType>
+      <rawTypeId>65553</rawTypeId>
+      <thumbNum>1</thumbNum>
+      <thumbSizes>1536</thumbSizes>
+      <thumbFormats>JPEG</thumbFormats>
+      <thumbDataSizes>233232</thumbDataSizes>
+      <rawDataType>CFA</rawDataType>
+      <rawDataSize>13036672</rawDataSize>
+      <rawDataDimensions>3152 2068</rawDataDimensions>
+      <rawCfaPattern>RGGB</rawCfaPattern>
+      <rawMinValue>0</rawMinValue>
+      <rawMaxValue>1023</rawMaxValue>
+      <rawMd5>33</rawMd5>
+      <metaOrientation>1</metaOrientation>
+    </results>
+  </test>
+  <test>
+    <name>NEF-test D100</name>
+    <file>/home/hub/samples/nef/D100/dsc_0007.nef</file>
+    <source>http://libopenraw.freedesktop.org/samples/nef/D100/dsc_0007.nef</source>
+    <results>
+      <rawType>NEF</rawType>
+      <rawTypeId>131076</rawTypeId>
+      <thumbNum>1</thumbNum>
+      <thumbSizes>160</thumbSizes>
+      <thumbFormats>8RGB</thumbFormats>
+      <thumbDataSizes>57600</thumbDataSizes>
+      <rawDataType>CFA</rawDataType>
+      <rawDataSize>12305920</rawDataSize>
+      <rawDataDimensions>3040 2024</rawDataDimensions>
+      <rawCfaPattern>GRBG</rawCfaPattern>
+      <rawMinValue>0</rawMinValue>
+      <rawMaxValue>4095</rawMaxValue>
+      <rawMd5>26</rawMd5>
+      <metaOrientation>0</metaOrientation>
+    </results>
+  </test>
+  <test>
+    <name>NEF-test D70</name>
+    <file>/home/hub/samples/nef/D70/dsc_0113.nef</file>
+    <results>
+      <rawType>NEF</rawType>
+      <rawTypeId>131085</rawTypeId>
+      <thumbNum>2</thumbNum>
+      <thumbSizes>160 3008</thumbSizes>
+      <thumbFormats>8RGB JPEG</thumbFormats>
+      <thumbDataSizes>57600 578350</thumbDataSizes>
+      <rawDataType>CFA</rawDataType>
+      <rawDataSize>12241092</rawDataSize>
+      <rawDataDimensions>3039 2014</rawDataDimensions>
+      <rawCfaPattern>BGGR</rawCfaPattern>
+      <rawMinValue>0</rawMinValue>
+      <rawMaxValue>4095</rawMaxValue>
+      <rawMd5>109</rawMd5>
+      <metaOrientation>8</metaOrientation>
+    </results>
+  </test>
+  <test>
+    <name>NEF-test D70 vertical</name>
+    <file>/home/hub/samples/fromdikigam/VERTICAL/DSC_2162.NEF</file>
+    <source>http://digikam3rdparty.free.fr/TEST_IMAGES/RAW/VERTICAL/DSC_2162.NEF</source>
+    <results>
+      <rawType>NEF</rawType>
+      <rawTypeId>131085</rawTypeId>
+      <thumbNum>2</thumbNum>
+      <thumbSizes>160 3008</thumbSizes>
+      <thumbFormats>8RGB JPEG</thumbFormats>
+      <thumbDataSizes>57600 820445</thumbDataSizes>
+      <rawDataType>CFA</rawDataType>
+      <rawDataSize>12241092</rawDataSize>
+      <rawDataDimensions>3039 2014</rawDataDimensions>
+      <rawCfaPattern>BGGR</rawCfaPattern>
+      <rawMinValue>0</rawMinValue>
+      <rawMaxValue>4095</rawMaxValue>
+      <rawMd5>87</rawMd5>
+      <metaOrientation>8</metaOrientation>      
+    </results>
+  </test>
+  <test>
+    <name>NEF-test Coolpix5700</name>
+    <file>/home/hub/samples/nef/Coolpix5700/NIKON-COOLPIX5700.NEF</file>
+    <source>http://digikam3rdparty.free.fr/TEST_IMAGES/RAW/HORIZONTAL/NIKON-COOLPIX5700.NEF</source>
+    <results>
+      <rawType>NEF</rawType>
+      <rawTypeId>131085</rawTypeId>
+      <thumbNum>2</thumbNum>
+      <thumbSizes>160 3008</thumbSizes>
+      <thumbFormats>8RGB JPEG</thumbFormats>
+      <thumbDataSizes>57600 697471</thumbDataSizes>
+      <rawDataType>CFA</rawDataType>
+      <rawDataSize>12241092</rawDataSize>
+      <rawDataDimensions>3039 2014</rawDataDimensions>
+      <rawCfaPattern>BGGR</rawCfaPattern>
+      <rawMinValue>0</rawMinValue>
+      <rawMaxValue>4095</rawMaxValue>
+      <rawMd5>246</rawMd5>
+      <metaOrientation>1</metaOrientation>      
+    </results>
+  </test>
+  <test>
+    <name>NEF-test D1</name>
+    <file>/home/hub/samples/nef/D1/DSC_0489.nef</file>
+    <source>http://www.steves-digicams.com/sdc-classic/nikond1/samples/dsc_0489.nef</source>
+    <results>
+      <rawType>NEF</rawType>
+      <rawTypeId>131074</rawTypeId>
+      <thumbNum>1</thumbNum>
+      <thumbSizes>160</thumbSizes>
+      <thumbFormats>8RGB</thumbFormats>
+      <thumbDataSizes>57600</thumbDataSizes>
+      <rawDataType>CFA</rawDataType>
+      <rawDataSize>5327776</rawDataSize>
+      <rawDataDimensions>2012 1324</rawDataDimensions>
+      <rawCfaPattern>BGGR</rawCfaPattern>
+      <rawMinValue>0</rawMinValue>
+      <rawMaxValue>4095</rawMaxValue>
+      <rawMd5>207</rawMd5>
+      <metaOrientation>0</metaOrientation>            
+    </results>
+  </test>
+  <test>
+    <name>NEF-test D2H</name>
+    <file>/home/hub/samples/nef/D2H/ca-on-anime_north-2007-05-cf05-0100.nef</file>
+    <results>
+      <rawType>NEF</rawType>
+      <rawTypeId>131077</rawTypeId>
+      <thumbNum>1</thumbNum>
+      <thumbSizes>160</thumbSizes>
+      <thumbFormats>8RGB</thumbFormats>
+      <thumbDataSizes>57600</thumbDataSizes>
+      <rawDataType>CFA</rawDataType>
+      <rawDataSize>8223520</rawDataSize>
+      <rawDataDimensions>2495 1648</rawDataDimensions>
+      <rawCfaPattern>GBRG</rawCfaPattern>
+      <rawMinValue>0</rawMinValue>
+      <rawMaxValue>4095</rawMaxValue>
+      <rawMd5>52</rawMd5>
+      <metaOrientation>1</metaOrientation>            
+    </results>
+  </test>
+  <test>
+    <name>ERF-test R-D1</name>
+    <file>/home/hub/samples/erf/Epson_RD1/_eps8447.erf</file>
+    <source>http://libopenraw.freedesktop.org/samples/erf/_eps8447.erf</source>
+    <results>
+      <rawType>ERF</rawType>
+      <rawTypeId>327681</rawTypeId>
+      <thumbNum>1</thumbNum>
+      <thumbSizes>160</thumbSizes>
+      <thumbFormats>8RGB</thumbFormats>
+      <thumbDataSizes>57600</thumbDataSizes>
+      <rawDataType>CFA</rawDataType>
+      <rawDataSize>12305920</rawDataSize>
+      <rawDataDimensions>3040 2024</rawDataDimensions>
+      <rawCfaPattern>RGGB</rawCfaPattern>
+      <rawMinValue>0</rawMinValue>
+      <rawMaxValue>4095</rawMaxValue>
+      <rawMd5>2</rawMd5>
+      <metaOrientation>1</metaOrientation>
+    </results>
+  </test>
+  <test>
+    <name>PEF-test K10D</name>
+    <file>/home/hub/samples/pef/K10D/k10d.pef</file>
+    <source>http://digikam3rdparty.free.fr/TEST_IMAGES/RAW/VERTICAL/k10d.pef</source>
+    <results>
+      <rawType>PEF</rawType>
+      <rawTypeId>262145</rawTypeId>
+      <thumbNum>2</thumbNum>
+      <thumbSizes>160 3872</thumbSizes>
+      <thumbFormats>JPEG JPEG</thumbFormats>
+      <thumbDataSizes>6696 1254388</thumbDataSizes>
+      <rawDataType>COMP_CFA</rawDataType>
+      <rawDataSize>8025398</rawDataSize>
+      <rawDataDimensions>3936 2624</rawDataDimensions>
+      <rawCfaPattern>RGGB</rawCfaPattern>
+      <metaOrientation>8</metaOrientation>
+    </results>
+  </test>
+  <test>
+    <name>PEF-test *-ist D</name>
+    <file>/home/hub/samples/pef/star-ist-D/PENTAX-ISD.PEF</file>
+    <source>http://digikam3rdparty.free.fr/TEST_IMAGES/RAW/HORIZONTAL/PENTAX-ISD.PEF</source>
+    <results>
+      <rawType>PEF</rawType>
+      <rawTypeId>262147</rawTypeId>
+      <thumbNum>2</thumbNum>
+      <thumbSizes>160 3008</thumbSizes>
+      <thumbFormats>JPEG JPEG</thumbFormats>
+      <thumbDataSizes>5308 1343392</thumbDataSizes>
+      <rawDataType>CFA</rawDataType>
+      <rawDataSize>12305920</rawDataSize>
+      <rawDataDimensions>3040 2024</rawDataDimensions>
+      <rawCfaPattern>RGGB</rawCfaPattern>
+      <rawMd5>63</rawMd5>
+      <metaOrientation>0</metaOrientation>
+    </results>
+  </test>
+  <test>
+    <name>DNG-test K10D</name>
+    <file>/home/hub/samples/dng/K10D/k10d.dng</file>
+    <source>http://digikam3rdparty.free.fr/TEST_IMAGES/RAW/VERTICAL/k10d.dng</source>
+    <results>
+      <rawType>DNG</rawType>
+      <rawTypeId>262146</rawTypeId>
+      <thumbNum>2</thumbNum>
+      <thumbSizes>160 3872</thumbSizes>
+      <thumbFormats>8RGB JPEG</thumbFormats>
+      <thumbDataSizes>57600 1265761</thumbDataSizes>
+      <rawDataType>CFA</rawDataType>
+      <rawDataSize>20656128</rawDataSize>
+      <rawDataDimensions>3936 2624</rawDataDimensions>
+      <rawCfaPattern>RGGB</rawCfaPattern>
+      <rawMinValue>0</rawMinValue>
+      <rawMaxValue>4095</rawMaxValue>
+      <rawMd5>113</rawMd5>
+      <metaOrientation>8</metaOrientation>
+    </results>
+  </test>
+  <test>
+    <name>DNG-test Leica DMR</name>
+    <file>/home/hub/samples/dng/leica_DMR/Dragonfly_L2110015.dng</file>
+    <source></source>
+    <results>
+      <rawType>DNG</rawType>
+      <rawTypeId>196609</rawTypeId>
+      <thumbNum>1</thumbNum>
+      <thumbSizes>310</thumbSizes>
+      <thumbFormats>8RGB</thumbFormats>
+      <thumbDataSizes>191580</thumbDataSizes>
+      <rawDataType>CFA</rawDataType>
+      <rawDataSize>20134656</rawDataSize>
+      <rawDataDimensions>3884 2592</rawDataDimensions>
+      <rawCfaPattern>RGGB</rawCfaPattern>
+      <rawMinValue>0</rawMinValue>
+      <rawMaxValue>65535</rawMaxValue>
+      <metaOrientation>1</metaOrientation>
+      <rawMd5>129</rawMd5>
+    </results>
+  </test>
+  <test>
+    <name>DNG-test Leica M8</name>
+    <file>/home/hub/samples/dng/Leica_M8/RAW_LEICA_M8.DNG</file>
+    <source>http://www.rawsamples.ch/raws/leica/m8/RAW_LEICA_M8.DNG</source>
+    <results>
+      <rawType>DNG</rawType>
+      <rawTypeId>196610</rawTypeId>
+      <thumbNum>1</thumbNum>
+      <thumbSizes>320</thumbSizes>
+      <thumbFormats>8RGB</thumbFormats>
+      <thumbDataSizes>65280</thumbDataSizes>
+      <rawDataType>CFA</rawDataType>
+      <rawDataSize>20681920</rawDataSize>
+      <rawDataDimensions>3920 2638</rawDataDimensions>
+      <rawCfaPattern>RGGB</rawCfaPattern>
+      <rawMinValue>0</rawMinValue>
+      <rawMaxValue>255</rawMaxValue>
+      <metaOrientation>1</metaOrientation>
+      <rawMd5>233</rawMd5>
+    </results>
+  </test>
+  <test>
+    <name>ORF-test E300</name>
+    <file>/home/hub/samples/orf/Olympus_E300/P7080133.ORF</file>
+    <results>
+      <rawType>ORF</rawType>
+      <rawTypeId>458756</rawTypeId>
+      <thumbNum>1</thumbNum>
+      <thumbSizes>160</thumbSizes>
+      <thumbFormats>JPEG</thumbFormats>
+      <thumbDataSizes>10614</thumbDataSizes>
+      <rawDataType>COMP_CFA</rawDataType>
+      <rawDataSize>13461504</rawDataSize>
+      <rawDataDimensions>3360 2504</rawDataDimensions>
+      <rawCfaPattern>RGGB</rawCfaPattern>
+      <metaOrientation>1</metaOrientation>
+    </results>
+  </test>
+  <test>
+    <name>ORF-test E330</name>
+    <file>/home/hub/samples/300mm_f5.6.ORF</file>
+    <source>http://raw.fotosite.pl/download-Olympus_E-330_Sigma_135-400_f4.5-5.6/300mm_f5.6.ORF</source>
+    <results>
+      <rawType>ORF</rawType>
+      <rawTypeId>458757</rawTypeId>
+      <thumbNum>1</thumbNum>
+      <thumbSizes>160</thumbSizes>
+      <thumbFormats>JPEG</thumbFormats>
+      <thumbDataSizes>11074</thumbDataSizes>
+      <rawDataType>COMP_CFA</rawDataType>
+      <rawDataSize>12857600</rawDataSize>
+      <rawDataDimensions>3280 2450</rawDataDimensions>
+      <rawCfaPattern>RGGB</rawCfaPattern>
+      <rawMinValue>0</rawMinValue>
+      <rawMaxValue>65535</rawMaxValue>
+      <metaOrientation>1</metaOrientation>
+    </results>
+  </test>
+  <test>
+  	<name>ORF-test E-410</name>
+  	<file>/home/hub/samples/p1013308.orf</file>
+  	<results>
+      <rawType>ORF</rawType>
+      <rawTypeId>458759</rawTypeId>
+      <thumbNum>0</thumbNum>
+      <rawDataType>COMP_CFA</rawDataType>
+      <rawDataSize>8131436</rawDataSize>
+      <rawDataDimensions>3720 2800</rawDataDimensions>
+      <rawCfaPattern>RGGB</rawCfaPattern>
+      <rawMinValue>0</rawMinValue>
+      <rawMaxValue>65535</rawMaxValue>
+      <metaOrientation>1</metaOrientation>
+  	</results>
+  </test>
+  <test>
+    <name>MRW-test Dimage5</name>
+    <file>/home/hub/samples/mrw/Dimage5/dimage5.mrw</file>
+    <source>http://libopenraw.freedesktop.org/samples/mrw/dimage5.mrw</source>
+    <results>
+      <rawType>MRW</rawType>
+      <rawTypeId>393219</rawTypeId>
+      <thumbNum>1</thumbNum>
+      <thumbSizes>640</thumbSizes>
+      <thumbFormats>JPEG</thumbFormats>
+      <thumbDataSizes>34222</thumbDataSizes>
+      <rawDataType>CFA</rawDataType>
+      <rawDataSize>6348928</rawDataSize>
+      <rawDataDimensions>2056 1544</rawDataDimensions>
+      <rawCfaPattern>RGGB</rawCfaPattern>
+      <rawMinValue>0</rawMinValue>
+      <rawMaxValue>3965</rawMaxValue>
+      <rawMd5>251</rawMd5>
+      <metaOrientation>0</metaOrientation>
+    </results>    
+  </test>
+  <test>
+    <name>MRW-test Dimage7i</name>
+    <file>/home/hub/samples/mrw/Dimage7i/RAW_MINOLTA_DIMAGE_7I.MRW</file>
+    <source>http://www.rawsamples.ch/raws/minolta/7i/RAW_MINOLTA_DIMAGE_7I.MRW</source>
+    <results>
+      <rawType>MRW</rawType>
+      <rawTypeId>393221</rawTypeId>
+      <thumbNum>1</thumbNum>
+      <thumbSizes>640</thumbSizes>
+      <thumbFormats>JPEG</thumbFormats>
+      <thumbDataSizes>56306</thumbDataSizes>
+      <rawDataType>CFA</rawDataType>
+      <rawDataSize>9902208</rawDataSize>
+      <rawDataDimensions>2568 1928</rawDataDimensions>
+      <rawCfaPattern>RGGB</rawCfaPattern>
+      <rawMinValue>0</rawMinValue>
+      <rawMaxValue>3965</rawMaxValue>
+      <rawMd5>214</rawMd5>
+      <metaOrientation>0</metaOrientation>
+    </results>    
+  </test>
+  <test>
+    <name>MRW-test Dimage7hi</name>
+    <file>/home/hub/samples/mrw/Dimage7HI/minolta-dimage7hi.mrw</file>
+    <source>http://digikam3rdparty.free.fr/TEST_IMAGES/RAW/HORIZONTAL/MINOLTA-DIMAGE7HI.MRW</source>
+    <results>
+      <rawType>MRW</rawType>
+      <rawTypeId>393222</rawTypeId>
+      <thumbNum>1</thumbNum>
+      <thumbSizes>640</thumbSizes>
+      <thumbFormats>JPEG</thumbFormats>
+      <thumbDataSizes>67497</thumbDataSizes>
+      <rawDataType>CFA</rawDataType>
+      <rawDataSize>9902208</rawDataSize>
+      <rawDataDimensions>2568 1928</rawDataDimensions>
+      <rawCfaPattern>RGGB</rawCfaPattern>
+      <rawMinValue>0</rawMinValue>
+      <rawMaxValue>3965</rawMaxValue>
+      <rawMd5>168</rawMd5>
+      <metaOrientation>0</metaOrientation>
+    </results>    
+  </test>
+  <test>
+    <name>ARW-test Sony A100</name>
+    <file>/home/hub/samples/arw/Sony-A100/DSC00028.ARW</file>
+    <source>http://digikam3rdparty.free.fr/TEST_IMAGES/RAW/VERTICAL/DSC00028.ARW</source>
+    <results>
+      <rawType>ARW</rawType>
+      <rawTypeId>524289</rawTypeId>
+      <thumbNum>1</thumbNum>
+      <thumbSizes>3872</thumbSizes>
+      <thumbFormats>JPEG</thumbFormats>
+      <thumbDataSizes>15915</thumbDataSizes>
+      <metaOrientation>8</metaOrientation>
+    </results>
+  </test>
+</testsuite>

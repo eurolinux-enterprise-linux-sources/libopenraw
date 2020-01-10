@@ -1,0 +1,134 @@
+libopenraw 0.0.9
+
+New features:
+
+  - make dist make a bzip2 archive too (build only).
+  - New demo ppmload to create a ppm out of the demosaicized image.
+  - Support (partially) PEF from Pentax K20D.
+  - Support for Olympus ORF big-endian files and "RS" (12-bits). 
+    Added E-10, E-P1, E-620, SP350, SP500, SP510 and SP550.
+  - Support for Canon G10, G11, 7D, 1DMarkIV, 5DMarkII, 500D, 550D, 60D and 1000D.
+  - Support for Canon 50D (Closes #30846).
+  - Support for Nikon D3000.
+  - Support for Sony A-550.
+  - Support for Leica X1 DNG.
+  - Support for Ricoh GRX DNG.
+  
+Bug fixes:
+
+  - API: or_rawfile_get_rendered_image() returns a ORBitmapDataRef with
+    the correct dimensions.
+    + corrected the Gdk support for above change.
+  - Check for get_current_dir_name() (Closes #24088)
+  - Don't crash when the files can't be written in the testsuite bootstrap.
+  - Detect that ORF file are compressed if they are. (Closes #26618)
+  - Skip compressed CFA when rendering the image. (Closes #25464)
+  - Accept YCbCr when the compression is JPEG. The K10D DNG should now have 
+    the large size preview.
+  - Install the GdkPixbuf in the right place. (Closes #29208) (Vincent Untz)
+  
+Internal changes:
+
+  - Rename debug.{h,cpp} to trace.{h,cpp}
+  - Fixed the case on several class names.
+
+libopenraw 0.0.8
+
+Bug fixes:
+
+  - includes missing for gcc 4.4
+  - Fix crash in or_get_file_extensions()
+
+libopenraw 0.0.7
+
+Bug fixes:
+
+  - fix some warnings in the test and demo programs.
+  - fix a huge memory leak (Closes #21435) (Priit Laes)
+
+libopenraw 0.0.6
+
+  - LICENSE change to LGPLv3+
+  - BUG: cfa output should write the data in PGM as big endian.
+  - BUG: added missing includes breaking on gcc 4.3 and other platforms.
+    (Closes bug #18243).
+  - BUG: better handling of Canon CR2 "slices" to fix crasher
+    with Canon 450D/Digital Rebel XSi files (and possibly others).
+  - NEW: API or_rawfile_new_from_memory() to load a Raw file from
+    a memory buffer.
+  - NEW: API or_rawfile_get_typeid() and the associated consts.
+  - NEW: API or_rawdata_get_minmax()
+  - NEW: API or_get_file_extensions()
+  - NEW: API or_rawfile_get_rendered_image() to get a rendered image.
+  - NEW: API or_bitmapdata_*()
+  - NEW: GdkPixbuf loader.
+  - NEW: Decompress NEF files.
+  - NEW: Python bindings.
+  - NEW: testsuite can be overridden with an override file.
+  - NEW: testsuite can be bootstrapped to download its files off 
+    the internet.
+  - NEW: add shave to the build system for saner output.
+  - TODO: apply the coefficients.
+
+libopenraw 0.0.5
+
+  - BUG: re-order commands in autogen.sh bug #14055
+  - BUG: IFDFileContainer inside another container was
+    failing because relative offsets were not used. Needed for
+    formats like RAF and MRW.
+  - BUG: testsuite didn't return a fail if a test failed, causing make check
+    to succeed even if test failed.
+  - BUG: in the use case CIFF (CRW) parsing could crash.
+  - BUG: JPEG thumbnails in CR2 where mistakenly recognized as 8RGB
+  - BUG: work around thumbnails in CR2 marked as JPEG but that really
+    are 8RGB (see Gnome bug #421175).
+  - BUG: decompressing CRW was reading past the buffer.
+  - NEW: testsuite now support doing checksum on data.
+  - NEW: support for Minolta MRW from Dimage 5, Dimage 7x, A1, A2, 5D
+    and 7D.
+  - NEW: API or_rawdata_get_cfa_pattern() to fetch the CFA pattern.
+  - NEW: Decompress/unpack RAW data from DNG uncompressed: Leica DMR,
+    Leica M8, Samsung GX-10 and Pro815, K10D, Ricoh GR-2)
+  - NEW: Decompress/unpack NEF RAW data from D1, D1X, D100, D2X.
+  - NEW: Unpack RAW data from Epson ERF R-D1 files.
+  - NEW: demo/thumbc output PPM if the thumbnail is 8RGB.
+  - NEW: demo/thumbc now allow -s to pass the thumbnail size wanted.
+
+libopenraw 0.0.4
+
+  - NEW: support for Epson ERF.
+  - NEW: support getting the image orientation: CR2, CRW, PEF, NEF, ORF,
+    ARW, DNG.
+  - NEW: rawfile API.
+  - NEW: ordiag dump the thumbnail byte size.
+  - NEW: configurable testsuite (without sample files).
+  - BUG: missing include.
+  - BUG: fix compiler warnings.
+  - BUG: fix some compile failures. bug #13717
+  - BUG: fix crash on non-CIFF CRW file. bug #13393
+  - BUG: gdk demo shouldn't be compiled without Gnome support. bug #13718
+  - BUG: boost detection cleanup. bug #13658, bug #13659
+
+libopenraw 0.0.3
+
+  - NEW: Decompress several formats: CR2, DNG and CRW.
+  - NEW: Added gdk pixbuf demo.
+  - BUG: fix crash if the file is not found. bug #13371
+  - BUG: fix memory bug in GdkPixbuf support. bug #13383
+
+libopenraw 0.0.2
+
+  - Added GdkPixbuf support for Gnome
+  - No longer install libopenraw++ headers
+
+libopenraw 0.0.1 - 12/09/06
+
+  - First release.
+	It features: 
+	-C and C++ api
+	-Thumbnail extraction
+	-Supported file formats are: Canon CR2 and CRW, 
+	Nikon NEF, Pentax PEF, Olympus ORF, 
+	Adobe DNG, Sony ARW.
+
+
